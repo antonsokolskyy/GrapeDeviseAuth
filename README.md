@@ -74,8 +74,11 @@ Every endpoind has a version that doen't fail or returns 401. For example authen
 Necessary parameters for endpoints:
 
 login_user!        - uid and password (inside request body)
+
 register_user!     - uid and any field to have validation for (inside request body)
+
 authenticate_user! - uid, client, access-token (inside request headers)
+
 
 
 [1]: https://github.com/mcordell/grape_devise_token_auth
