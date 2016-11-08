@@ -99,7 +99,7 @@ Necessary parameters for endpoints:
 
 login_user!        - uid and password (inside request body)
 
-register_user!     - uid and any field to have validation for (inside request body)
+register_user!     - uid and any fields you have validations for (inside request body)
 
 authenticate_user! - uid, client, access-token (inside request headers)
 
