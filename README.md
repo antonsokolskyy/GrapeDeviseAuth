@@ -34,14 +34,14 @@ batch_request_buffer_throttle = 2.weeks
 change_headers_on_each_request = true
 authenticate_all = false
 default_provider = 'email'
-@token_lifespan = 2.weeks
-@max_number_of_devices = 10
-@headers_names = {:'access-token' => 'access-token',
+token_lifespan = 2.weeks
+max_number_of_devices = 10
+headers_names = {:'access-token' => 'access-token',
                         :'client' => 'client',
                         :'expiry' => 'expiry',
                         :'uid' => 'uid',
                         :'token-type' => 'token-type' }
-@remove_tokens_after_password_reset = false
+remove_tokens_after_password_reset = false
 ```
 
 Within the Grape API:
@@ -76,6 +76,13 @@ get '/' do
   register_user!
 end
 ```
+
+Get current auth headers:
+
+```
+user_auth_headers
+```
+
 
 Devise routes must be present:
 
