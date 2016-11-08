@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["antonsokolskyi@gmail.com"]
 
   spec.summary       = %q{Allows to use Devise-based registration/authorization inside Grape API}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/antonsokolskyy/GrapeDeviseAuth"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

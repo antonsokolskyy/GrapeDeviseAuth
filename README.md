@@ -27,6 +27,23 @@ the grape API will get loaded:
 GrapeDeviseAuth.setup!
 ```
 
+Available config parameters and default values:
+
+```
+batch_request_buffer_throttle = 2.weeks
+change_headers_on_each_request = true
+authenticate_all = false
+default_provider = 'email'
+@token_lifespan = 2.weeks
+@max_number_of_devices = 10
+@headers_names = {:'access-token' => 'access-token',
+                        :'client' => 'client',
+                        :'expiry' => 'expiry',
+                        :'uid' => 'uid',
+                        :'token-type' => 'token-type' }
+@remove_tokens_after_password_reset = false
+```
+
 Within the Grape API:
 
 ```
@@ -68,7 +85,7 @@ Rails.application.routes.draw do
 end
 ```
 
-Every endpoind has a version that doen't fail or returns 401. For example authenticate_user(notice that it lacks of exclamation mark)
+Every endpoind has a version that doesn't fail or returns 401. For example authenticate_user(notice that it lacks of exclamation mark)
 
 
 Necessary parameters for endpoints:
