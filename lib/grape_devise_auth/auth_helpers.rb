@@ -77,13 +77,13 @@ module GrapeDeviseAuth
           if resource.save
             update_env_with_auth_data(resource.create_new_auth_token)
           else
-            nil
+            resource
           end
         end
 
         define_method("register_#{mapping}!") do
           register = send("register_#{mapping}")
-          raise RegistrationFailed unless register
+          raise RegistrationFailed.new(register.errors) if register.errors
           register
         end
       end
