@@ -13,7 +13,8 @@ module GrapeDeviseAuth
         auth_all
         responses_with_auth_headers(*@app.call(env))
       rescue Unauthorized => _e
-        return unauthorized
+        return unauthorized unless GrapeDeviseAuth.skip_middleware_unauthorized_error_raising
+        raise Unauthorized
       end
     end
 

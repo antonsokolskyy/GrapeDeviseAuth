@@ -7,7 +7,8 @@ module GrapeDeviseAuth
                   :token_lifespan,
                   :max_number_of_devices,
                   :headers_names,
-                  :remove_tokens_after_password_reset
+                  :remove_tokens_after_password_reset,
+                  :skip_middleware_unauthorized_error_raising
 
     ACCESS_TOKEN_KEY = 'HTTP_ACCESS_TOKEN'
     EXPIRY_KEY = 'HTTP_EXPIRY'
@@ -28,6 +29,7 @@ module GrapeDeviseAuth
                         :'uid' => 'uid',
                         :'token-type' => 'token-type' }
       @remove_tokens_after_password_reset = false
+      @skip_middleware_unauthorized_error_raising = true
     end
 
     def auth_all?
