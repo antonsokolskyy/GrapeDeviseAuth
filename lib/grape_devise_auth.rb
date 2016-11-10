@@ -17,9 +17,7 @@ module GrapeDeviseAuth
                    :token_lifespan,
                    :max_number_of_devices,
                    :headers_names,
-                   :remove_tokens_after_password_reset,
-                   :authenticate_all,
-                   :skip_middleware_unauthorized_error_raising
+                   :remove_tokens_after_password_reset
 
     def configuration
       @configuration ||= Configuration.new
